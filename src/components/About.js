@@ -8,10 +8,12 @@ import {motion} from 'framer-motion';
 // variant
 import {fadeIn} from '../variants';
 import Image from '../assets/be2.png';
+import { Link } from 'react-scroll';
 
 const About = () => {
   const [ref, inView] = useInView({
-    threshold: 0.5,
+    threshold: 0.3,
+    // threshold: 0.5, // works for phones
   });
   
   return (
@@ -37,20 +39,21 @@ const About = () => {
             viewport={{once: false, amount: 0.3}}
             className='flex-1'>
             <h2 className='h2 text-accent'>About me.</h2>
-            <h3 className='h3 mb-4'>I'm a Computer Science graduate with a Master's Degree.</h3>
+            <h3 className='h3 mb-4'>I am a full-stack engineer and designer based in 
+              Orange County, California with a Masters Degree in Computer Science</h3>
             <p className='mb-6'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
-            eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt 
-            in culpa qui officia deserunt mollit anim id est laborum.
+              As a dedicated master's graduate with a passion for software engineering 
+              and web development, I bring hands-on experience in crafting dynamic 
+              applications using React, Expressjs, and FastAPI. My proficiency in languages 
+              like C++, Python, and SQL, coupled with a strong foundation in algorithms and 
+              data structures, positions me to contribute effectively to impactful projects 
+              in the realm of technology.
             </p>
             {/* stats */}
             <div className='flex gap-x-6 lg:gap-x-10 mb-12'>
               <div>
                 <div className='text-[40px] font-teritary text-gradient mb-2'>
-                  {inView ? <CountUp start={0} end={15} duration={3} /> : null}
+                  {inView ? <CountUp start={0} end={15} duration={3} delay={1} /> : null}
                   +
                 </div>
                 <div className='font-primary text-sm tracking-[2px]'>
@@ -76,8 +79,19 @@ const About = () => {
               </div> */}
             </div>
             <div className='flex gap-x-8 items-center'>
-              <button className='btn btn-lg'>Contact me</button>
-              <a href='#' className='text-gradient btn-link'>
+              <div>
+                <Link 
+                  to='contact' 
+                  activeClass='active'
+                  smooth={true}
+                  spy={true}
+                  // offset={-200}
+                  className='cursor-pointer w-[60px] h-[60px]'>
+                  <button href="#contact" className='btn btn-lg'>
+                    Contact me</button>
+                </Link>
+              </div>
+              <a href='https://github.com/michaelvdang' className='text-gradient btn-link'>
                 My Portfolio
               </a>
             </div>

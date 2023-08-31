@@ -2,13 +2,14 @@ import React from 'react';
 // images
 import Image from '../assets/avatar3.png';
 // icons
-import {FaGithub, FaYoutube, FaDribbble} from 'react-icons/fa';
+import {FaGithub, FaYoutube, FaDribbble, FaInstagram, FaDiscord} from 'react-icons/fa';
 // type animation
 import {TypeAnimation} from 'react-type-animation';
 //motion
 import {motion} from 'framer-motion';
 // variants
 import {fadeIn} from '../variants';
+import {Link} from 'react-scroll';
 
 const Banner = () => {
   return (
@@ -51,20 +52,32 @@ const Banner = () => {
               initial="hidden" 
               whileInView={'show'} 
               className='mb-8 max-w-lg mx-auto lg:mx-0'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
-              eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt 
-              in culpa qui officia deserunt mollit anim id est laborum.
+              Aspiring software engineer eager to leverage my technical skills and passion 
+              for innovation to contribute to cutting-edge projects.
             </motion.p>
             <motion.div 
               variants={fadeIn('up', 0.9)} 
               initial="hidden" 
               whileInView={'show'} 
               className='flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0'>
-              <button className='btn btn-lg'>Contact me</button>
-              <a href="#" className='text-gradient btn-link'>My Portfolio</a>
+                {/* <button href="#contact" className='btn btn-lg'>
+                    Contact me</button> */}
+              {/* <div>
+                <Link 
+                  to='contact' 
+                  activeClass='active'
+                  smooth={true}
+                  spy={true}
+                  // offset={-200}
+                  className='cursor-pointer w-[60px] h-[60px]'>
+                  <button href="#contact" className='btn btn-lg'>
+                    Contact me</button>
+                </Link>
+              </div> */}
+              <a 
+                href="https://github.com/michaelvdang" 
+                className='text-gradient btn-link'
+              >My Portfolio</a>
             </motion.div>
             {/* socials */}
             <motion.div 
@@ -74,13 +87,13 @@ const Banner = () => {
               viewport={{once: false, amount: 0.1}} 
               className='flex text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0'>
               <a href='#'>
-                <FaYoutube className='text-2xl' />
+                <FaDiscord className='text-2xl' />
               </a>
-              <a href='#'>
+              <a href='https://github.com/michaelvdang'>
                 <FaGithub className='text-2xl' />
               </a>
-              <a href='#'>
-                <FaDribbble className='text-2xl' />
+              <a href='https://www.instagram.com/michaeltute/'>
+                <FaInstagram className='text-2xl' />
               </a>
             </motion.div>
           </div>

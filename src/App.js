@@ -4,22 +4,22 @@ import Banner from './components/Banner';
 import Header from './components/Header';
 import Nav from './components/Nav';
 import About from './components/About';
-import Services from './components/Services';
+import Specialties from './components/Specialty';
 import Work from './components/Work';
 import Contact from './components/Contact';
 
 const App = () => {
   return (
     // <div className='bg-site bg-no-repeat bg-cover bg-blend-color-burn overflow-hidden'>
-    <div className='bg-slate-950 overflow-hidden'>
+    <div className='bg-slate-900 overflow-hidden'>
       <Header />
       <Banner />
       <Nav />
       <About />
-      <Services />
+      <Specialties />
       <Work />
       <Contact />
-      {/* <div className='h-[4000px]'></div> */}
+      <div className='h-[200px]'></div>
     </div>
   );
 };

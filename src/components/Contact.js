@@ -6,7 +6,7 @@ import {fadeIn} from '../variants';
 
 const Contact = () => {
   return (
-    <section className='py-16 lg:section' id='contact'>
+    <section id='contact' className='py-16 lg:section'>
       <div className='container mx-auto'>
         <div className='flex flex-col lg:flex-row gap-y-4'>
           {/* text */}
@@ -17,11 +17,11 @@ const Contact = () => {
             viewport={{once: false, amount: 0.3}}
             className='flex-1 flex justify-start items-center'>
             <div>
-              <h4 className='text-xl uppercase text-accent font-medium mb-2 tracking-wide'>
+              <h4 className='text-[28px] uppercase text-accent font-medium mb-2 tracking-wide'>
                 Get in touch 
               </h4>
               <h2 className='text-[45px] lg:text-[90px] leading-none'>
-                Let's work <br/> together!
+                Hire me!
               </h2>
             </div>
           </motion.div>
