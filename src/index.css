@@ -69,3 +69,15 @@
     @apply py-8 lg:py-24 lg:h-screen flex items-center mb-[50px];
   }
 }
+
+/* Input box behavior on autofill */
+input:-webkit-autofill:focus{
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+input[data-autocompleted] {
+    background-color: transparent !important;
+}
+textarea:focus, input:focus{
+  outline: none;
+  /* color: #ee5af8 */
+}

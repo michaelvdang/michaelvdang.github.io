@@ -1,5 +1,7 @@
 import React, {useState, useRef} from 'react'
+import { Scroller } from 'react-scroll/modules/mixins/scroller';
 import emailjs from '@emailjs/browser';
+import { scroller } from 'react-scroll';
 const service_id = process.env.REACT_APP_SERVICE_ID;
 const template_id = process.env.REACT_APP_TEMPLATE_ID;
 const public_key = process.env.REACT_APP_PUBLIC_KEY;
@@ -7,11 +9,14 @@ const public_key = process.env.REACT_APP_PUBLIC_KEY;
 const ContactForm = () => {
   const contact_form = useRef();
   const [submitted, setSubmitted] = useState(false);
-  const classInvalid = 'bg-transparent border border-red-600 py-3 placeholder:text-white focus:border-accent transition-all';
-  const classDefault = 'bg-transparent border-b py-3 placeholder:text-white focus:border-accent transition-all';
+  const classInvalid = 'bg-transparent focus:border-2 rounded border border-accentError py-3 placeholder:text-white transition-all';
+  const classDefault = 'bg-transparent focus:border-2 rounded border-b py-3 placeholder:text-white transition-all'
+  // const classDefault = 'bg-transparent border-b py-3 placeholder:text-white focus:border-accentError transition-all';
   const [emailClass, setEmailClass] = useState(classDefault);
   const [nameClass, setNameClass] = useState(classDefault);
-  const [messageClass, setMessageClass] = useState(classDefault);
+  const classInvalidTextarea = 'bg-transparent focus:border-2 rounded border border-accentError py-12 placeholder:text-white transition-all resize-none mb-12';
+  const classDefaultTextarea = 'bg-transparent focus:border-2 rounded border-b py-12 placeholder:text-white transition-all resize-none mb-12';
+  const [messageClass, setMessageClass] = useState(classDefaultTextarea);
 
   // email validation
   const [showEmailWarning, setShowEmailWarning] = useState(false);
@@ -31,7 +36,7 @@ const ContactForm = () => {
   }
   const handleMessageChange = (e) => {
     setShowMessageWarning(false);
-    setMessageClass(classDefault);
+    setMessageClass(classDefaultTextarea);
   }
 
   const handleSubmit = (e) => {
@@ -39,31 +44,45 @@ const ContactForm = () => {
     // console.log(contact_form.current.recruiter_name.value + 
     //     contact_form.current.recruiter_email.value + 
     //     contact_form.current.message.value);
+
     if (!contact_form.current.recruiter_name.value) {
       setNameClass(classInvalid);
       setShowNameWarning(true);
-      return;
     }
     if (!emailValidation()) {
       setEmailClass(classInvalid);
       setShowEmailWarning(true);
-      return;
     }
     if (!contact_form.current.message.value) {
-      setMessageClass(classInvalid);
+      setMessageClass(classInvalidTextarea);
       setShowMessageWarning(true);
-      return;
     }
-    
-    // emailjs.sendForm(service_id, template_id, contact_form.current, public_key)
-    // .then(function(response) {
-    //    console.log('SUCCESS!', response.status, response.text);
-    //    setSubmitted(true);
-    // }, function(error) {
-      //    console.log('FAILED...', error);
-      // });
-      alert('Your message has been sent!');
+    if (!contact_form.current.recruiter_name.value || !emailValidation() || !contact_form.current.message.value) {
+      return;
+    }    
+
+    emailjs.sendForm(service_id, template_id, contact_form.current, public_key)
+    .then(function(response) {
+      console.log('SUCCESS!', response.status, response.text);
       setSubmitted(true);
+      scroller.scrollTo('contact', {
+      delay: 0,
+      smooth: 'easeInOutQuart',
+      spy: true,
+      activeClass: 'active',
+      });
+    }, function(error) {
+      console.log('FAILED...', error);
+    });
+    // alert('Your message has been sent! Thank you for reaching out to me.')
+    // setSubmitted(true);
+    // scroller.scrollTo('contact', {
+    //   // duration: 800,
+    //   delay: 0,
+    //   smooth: 'easeInOutQuart',
+    //   spy: true,
+    //   activeClass: 'active',
+    // });
   };
   
   if (submitted) {
@@ -79,18 +98,21 @@ const ContactForm = () => {
       ref={contact_form}
       onSubmit={handleSubmit}
       className='border rounded-2xl flex flex-col gap-y-6
-      p-6 pb-24'>
-    <input 
-      className='bg-transparent border-b py-3 placeholder:text-white 
-        focus:border-accent transition-all'
-      placeholder='Your name*'
-      type="text" 
-      name="recruiter_name"
-      // required
-      onChange={handleNameChange}
-    />
+      p-6 pb-24 border-accent'>
+      <input 
+        className={nameClass}
+        // className='bg-transparent focus:border-2 rounded-md
+        //   border-b py-3 placeholder:text-white transition-all'
+        // className='bg-transparent border-b py-3 placeholder:text-white 
+        //   focus:border-accent transition-all'
+        placeholder='Your name*'
+        type="text" 
+        name="recruiter_name"
+        // required
+        onChange={handleNameChange}
+      />
     {showNameWarning && 
-      <div className='relative -top-6 text-red-600 font-secondary h-0'>Please enter a name</div>
+      <div className='relative -top-6 text-accentError font-secondary h-0'>Please enter a name</div>
     }
     {<input 
       className={emailClass}
@@ -104,18 +126,19 @@ const ContactForm = () => {
       onChange={handleEmailChange}
     />}
     {showEmailWarning && 
-      <div className='relative -top-6 text-red-600 font-secondary h-0'>Please enter a valid email</div>
+      <div className='relative -top-6 text-accentError font-secondary h-0'>Please enter a valid email</div>
     }
     <textarea 
-      className='bg-transparent border-b py-12 placeholder:text-white 
-        focus:border-accent transition-all resize-none mb-12'
+      className={messageClass}
+      // className='bg-transparent border-b py-12 placeholder:text-white 
+      //   focus:border-accent transition-all resize-none mb-12'
       placeholder='Your message*'
       name="message"
       // required
       onChange={handleMessageChange}
     ></textarea>
     {showMessageWarning && 
-      <div className='relative -top-6 text-red-600 font-secondary h-0'>Please enter a message</div>
+      <div className='relative -top-[72px] text-accentError font-secondary h-0'>Please enter a message</div>
     }
     <button 
       type='submit'

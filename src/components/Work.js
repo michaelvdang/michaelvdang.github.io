@@ -28,7 +28,7 @@ const projects = [
     type: 'Software Engineering',
     title: 'Full-stack Application - Big Chemical Inc.',
     img: Img3,
-    link: '',
+    link: 'https://github.com/michaelvdang/BigChemicalInc',
   },
 ];
 

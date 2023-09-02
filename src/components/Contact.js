@@ -6,39 +6,6 @@ import {fadeIn} from '../variants';
 import ContactForm from './ContactForm';
 
 const Contact = () => {
-  // const [submitted, setSubmitted] = useState(false);
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   const inputs = e.target.elements;
-  //   const data = {};
-    
-  //   for (let i = 0; i < inputs.length; i++) {
-  //     if (inputs[i].name) {
-  //       data[inputs[i].name] = inputs[i].value;
-  //     }
-  //   }
-  //   alert(data);
-
-  //   emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', '#myForm')
-  //   .then(function(response) {
-  //      console.log('SUCCESS!', response.status, response.text);
-  //      setSubmitted(true);
-
-       
-       
-  //   }, function(error) {
-  //      console.log('FAILED...', error);
-  //   });
-    
-  //   if (submitted) {
-  //     return (
-  //       <>
-  //         <div className="text-2xl">Thank you!</div>
-  //         <div className="text-md">We'll be in touch soon.</div>
-  //       </>
-  //     );
-  //   }
-  // };
     
   return (
     <section id='contact' className='py-16 lg:section'>

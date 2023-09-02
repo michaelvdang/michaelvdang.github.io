@@ -51,7 +51,8 @@ const Nav = () => {
                 key={id}
                 to={text}
                 activeClass='active'
-                smooth={true}
+                smooth='easeInOutQuart'
+                // smooth={true}
                 spy={true}
                 offset={offset}
                 className='cursor-pointer w-[60px] h-[60px] flex items-center
