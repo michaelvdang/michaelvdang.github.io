@@ -27,8 +27,8 @@ const About = () => {
             initial="hidden"
             whileInView={'show'}
             viewport={{once: false, amount: 0.3}}
-            className='flex-1 bg-about bg-contain bg-no-repeat h-[640px] min-h-[300px] 
-            mix-blend-lighten bg-top'>
+            className='flex-1 bg-about bg-contain bg-no-repeat h-[640px] min-h-[250px] 
+            mix-blend-normal bg-top'>
               {/* <img src={Image} alt="about" className='h-96' /> */}
             </motion.div>
           {/* text */}

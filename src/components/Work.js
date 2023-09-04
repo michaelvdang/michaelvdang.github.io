@@ -4,9 +4,12 @@ import {motion} from 'framer-motion';
 // variants
 import {fadeIn} from '../variants';
 // img
-import Img1 from '../assets/portfolio-img1.png';
-import Img2 from '../assets/portfolio-img2.png';
-import Img3 from '../assets/portfolio-img3.png';
+import Img1 from '../assets/gh-page.jpg';
+// import Img1 from '../assets/portfolio-img1.png';
+import Img2 from '../assets/gh-page-expertise.jpg';
+// import Img2 from '../assets/portfolio-img2.png';
+import Img3 from '../assets/gh-page-2.jpg';
+// import Img3 from '../assets/portfolio-img3.png';
 
 const projects = [
   {
@@ -62,7 +65,7 @@ const Work = () => {
               border-white/50 rounded-xl'>
                 {/* overlay */}
                   <div className='group-hover:bg-black/70 w-full h-full absolute
-                  z-40 transition-all duration-300'></div>
+                  transition-all duration-300 z-10'></div>
                 {/* img */}
                 <img 
                   className='group-hover:scale-125 transition-all duration-300' 
@@ -70,14 +73,14 @@ const Work = () => {
                   alt={projects[0].title} />
                 {/* pretitle */}
                 <div className='absolute top-full left-12 group-hover:top-24
-                transition-all duration-500 z-50'>
+                transition-all duration-500 z-20'>
                   <span className='text-gradient'>
                     {projects[0].type}
                   </span>
                 </div>
                 {/* title */}
                 <div className='absolute top-full left-12 group-hover:top-32
-                transition-all duration-700 z-50'>
+                transition-all duration-700 z-20'>
                   <span className='text-3xl text-white'>{projects[0].title}</span>
                 </div>
               </div>
@@ -95,7 +98,7 @@ const Work = () => {
             border-white/50 rounded-xl'>
               {/* overlay */}
                 <div className='group-hover:bg-black/70 w-full h-full absolute
-                z-40 transition-all duration-300'></div>
+                z-10 transition-all duration-300'></div>
               {/* img */}
               <img 
                 className='group-hover:scale-125 transition-all duration-300' 
@@ -103,14 +106,14 @@ const Work = () => {
                 alt={projects[1].title} />
               {/* pretitle */}
               <div className='absolute top-full left-12 group-hover:top-24
-                transition-all duration-500 z-50'>
+                z-20 transition-all duration-500'>
                 <span className='text-gradient'>
                   {projects[1].type}
                 </span>
               </div>
               {/* title */}
               <div className='absolute top-full left-12 group-hover:top-32
-                transition-all duration-700 z-50'>
+                z-20 transition-all duration-700'>
                 <span className='text-3xl text-white'>{projects[1].title}</span>
               </div>
             </div>
@@ -121,7 +124,7 @@ const Work = () => {
               border-white/50 rounded-xl'>
                 {/* overlay */}
                 <div className='group-hover:bg-black/70 w-full h-full absolute
-                z-40 transition-all duration-300'></div>
+                z-10 transition-all duration-300'></div>
                 {/* img */}
                 <img 
                   className='group-hover:scale-125 transition-all duration-300' 
@@ -129,14 +132,14 @@ const Work = () => {
                   alt={projects[2].title} />
                 {/* pretitle */}
                 <div className='absolute top-full left-12 group-hover:top-24
-                transition-all duration-500 z-50'>
+                z-20 transition-all duration-500'>
                   <span className='text-gradient'>
                     {projects[2].type}
                   </span>
                 </div>
                 {/* title */}
                 <div className='absolute top-full left-12 group-hover:top-32
-                transition-all duration-700 z-50'>
+                z-20 transition-all duration-700'>
                   <span className='text-3xl text-white'>{projects[2].title}</span>
                 </div>
               </div>

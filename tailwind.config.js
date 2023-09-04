@@ -20,13 +20,16 @@ module.exports = {
     extend: {
       colors: {
         primary: '#0a0a0a',
-        accent: '#B809C3',
-        accentError: '#ff0077',
+        accent: '#f68e80',
+        // accent: '#B809C3',
+        accentError: '#f05d4a',
+        // accentError: '#ff0077',
       },
       backgroundImage: {
         // site: "url('./assets/site-bg.jpg')",
         site: "url('./assets/site-bg2.jpg')",
-        about: "url('./assets/be21.png')",
+        about: "url('./assets/beni5.png')",
+        // about: "url('./assets/be21.png')",
         services: "url('./assets/services.png')",
       },
     },

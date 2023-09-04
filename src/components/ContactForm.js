@@ -1,5 +1,4 @@
 import React, {useState, useRef} from 'react'
-import { Scroller } from 'react-scroll/modules/mixins/scroller';
 import emailjs from '@emailjs/browser';
 import { scroller } from 'react-scroll';
 const service_id = process.env.REACT_APP_SERVICE_ID;

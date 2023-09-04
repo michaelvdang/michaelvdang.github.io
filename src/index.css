@@ -2,24 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: rgb(51 65 85);
+  /* or bg-slate-900 */
+}
+
 .btn {
   background: linear-gradient(
     92.23deg,
-    #ff56f6 21.43%,
-    #b936ee 50.63%,
+    #f8b195 20%,
+    #f68280 50%,
+    #c06c84 100%,
+    #355c7d 120%
+    /* #ff56f6 20%,
+    #b936ee 50%,
     #3bace2 100%,
-    #406aff 117.04%
+    #406aff 120% */
   );
-  box-shadow: 0px 4.42184px 107.23px rgba(255, 86, 246, 0.51);
+  box-shadow: 0px 4.42184px 107.23px rgba(246, 130, 128, 0.60);
+  /* box-shadow: 0px 4.42184px 107.23px rgba(255, 86, 246, 0.51); */
 }
 
 .btn:hover {
   background: linear-gradient(
     92.23deg,
-    #406aff 21.43%,
-    #3bace2 50.63%,
+    #c06c84 20%,
+    #f68280 40%,
+    #f8b195 70%
+    /* #406aff 20%,
+    #3bace2 50%,
     #b936ee 100%,
-    #ff56f6 117.04%
+    #ff56f6 120% */
   );
 }
 
@@ -27,10 +40,18 @@
 .active {
   background: linear-gradient(
     92.23deg,
-    #406aff 21.43%,
-    #3bace2 50.63%,
+    /* #355c7d 10%, */
+    #c06c84 20%,
+    #f68280 40%,
+    #f8b195 70%
+    /* #355c7d 20%,
+    #c06c84 50%,
+    #f68280 100%,
+    #f8b195 120% */
+    /* #406aff 20%,
+    #3bace2 50%,
     #b936ee 100%,
-    #ff56f6 117.04%
+    #ff56f6 120% */
   );
 }
 
@@ -63,7 +84,9 @@
     @apply text-base;
   }
   .text-gradient {
-    @apply bg-gradient-to-r text-transparent bg-clip-text from-[#42A6E3] to-[#FF56F6] font-bold font-primary hover:from-[#FF56F6] hover:to-[#42A6E3];
+    /* color: #369bf3 120%,  */
+    @apply bg-gradient-to-r text-transparent bg-clip-text from-[#f8b195] to-[#369bf3] font-bold font-primary hover:from-[#369bf3] hover:to-[#f8b195];
+    /* @apply bg-gradient-to-r text-transparent bg-clip-text from-[#42A6E3] to-[#FF56F6] font-bold font-primary hover:from-[#FF56F6] hover:to-[#42A6E3]; */
   }
   .section {
     @apply py-8 lg:py-24 lg:h-screen flex items-center mb-[50px];
@@ -79,5 +102,4 @@ input[data-autocompleted] {
 }
 textarea:focus, input:focus{
   outline: none;
-  /* color: #ee5af8 */
 }
