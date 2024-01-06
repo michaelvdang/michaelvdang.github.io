@@ -4,11 +4,13 @@ import {motion} from 'framer-motion';
 // variants
 import {fadeIn} from '../variants';
 // img
-import Img1 from '../assets/gh-page.jpg';
+import Img1 from '../assets/wordle.png';
+// import Img1 from '../assets/gh-page.jpg';
 // import Img1 from '../assets/portfolio-img1.png';
-import Img2 from '../assets/gh-page-expertise.jpg';
+import Img2 from '../assets/color-tracing.jpg';
 // import Img2 from '../assets/portfolio-img2.png';
-import Img3 from '../assets/gh-page-2.jpg';
+import Img3 from '../assets/ai-image-generator.jpg';
+// import Img3 from '../assets/gh-page-2.jpg';
 // import Img3 from '../assets/portfolio-img3.png';
 
 const projects = [
@@ -17,21 +19,21 @@ const projects = [
     type: 'Software Engineering',
     title: 'Full-stack Application - Wordle',
     img: Img1,
-    link: 'https://github.com/michaelvdang/wordle',
+    link: 'https://mikespace.xyz/',
   },
   {
     id: 2,
     type: 'Machine Learning',
     title: 'Computer Vision - Object Detection',
     img: Img2,
-    link: '',
+    link: 'https://github.com/michaelvdang/OpenCV-color-tracing',
   },
   {
     id: 3,
     type: 'Software Engineering',
-    title: 'Full-stack Application - Big Chemical Inc.',
+    title: 'Full-stack Application - OpenAI Image Generator',
     img: Img3,
-    link: 'https://github.com/michaelvdang/BigChemicalInc',
+    link: 'https://github.com/michaelvdang/openAI-image-generator',
   },
 ];
 
