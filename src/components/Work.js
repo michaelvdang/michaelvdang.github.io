@@ -19,7 +19,7 @@ const projects = [
     type: 'Software Engineering',
     title: 'Full-stack Application - Wordle',
     img: Img1,
-    link: 'https://mikespace.xyz/',
+    link: 'https://michaeldang.dev/wordle/',
   },
   {
     id: 2,
