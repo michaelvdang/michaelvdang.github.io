@@ -114,28 +114,14 @@ const Work = () => {
             >
               <iframe
                 width="100%"
-                // width="610"
                 height="340"
-                src="https://www.youtube.com/embed/rYsDLBwko9Q?si=86tMKv6JIYN3hxOT"
+                src="https://www.youtube.com/embed/Dlicha5EqDw?si=Y51LM9lQFF6I_h9d"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen="allowfullscreen"
+                allowfullscreen
               ></iframe>
-              {/* <iframe
-                width="100%"
-                // width="610"
-                height="340"
-                // width="560"
-                // height="315"
-                src="https://www.youtube.com/embed/swLfN045v-Q?si=XB-QpwjmzVBh6XPN"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen="allowfullscreen"
-              ></iframe> */}
               {/* overlay */}
               {/* <div className='group-hover:bg-black/70 w-full h-full absolute
                 z-10 transition-all duration-300'></div> */}
