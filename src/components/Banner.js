@@ -86,18 +86,18 @@ const Banner = () => {
               whileInView={'show'} 
               viewport={{once: false, amount: 0.1}} 
               className='flex text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0'>
-              <a href='#'>
+              <a href='https://www.youtube.com/@MichaelDangDev'>
+                <FaYoutube className='text-2xl' />
+              </a>
+              <a href='https://discordapp.com/channels/@me/leachim9797#0'>
                 <FaDiscord className='text-2xl' />
               </a>
               <a href='https://github.com/michaelvdang'>
                 <FaGithub className='text-2xl' />
               </a>
-              <a href='https://www.instagram.com/michaeltute/'>
+              {/* <a href='https://www.instagram.com/michaeltute/'>
                 <FaInstagram className='text-2xl' />
-              </a>
-              <a href='https://www.youtube.com/@MichaelDang-o3e'>
-                <FaYoutube className='text-2xl' />
-              </a>
+              </a> */}
             </motion.div>
           </div>
           {/* image */}
