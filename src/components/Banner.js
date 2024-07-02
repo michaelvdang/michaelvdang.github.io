@@ -95,6 +95,9 @@ const Banner = () => {
               <a href='https://www.instagram.com/michaeltute/'>
                 <FaInstagram className='text-2xl' />
               </a>
+              <a href='https://www.youtube.com/@MichaelDang-o3e'>
+                <FaYoutube className='text-2xl' />
+              </a>
             </motion.div>
           </div>
           {/* image */}
