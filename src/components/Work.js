@@ -115,12 +115,12 @@ const Work = () => {
               <iframe
                 width="100%"
                 height="340"
-                src="https://www.youtube.com/embed/Dlicha5EqDw?si=Y51LM9lQFF6I_h9d"
+                src="https://www.youtube.com/embed/Dlicha5EqDw"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
+                allowfullscreen="true"
               ></iframe>
               {/* overlay */}
               {/* <div className='group-hover:bg-black/70 w-full h-full absolute
