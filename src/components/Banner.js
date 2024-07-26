@@ -62,22 +62,49 @@ const Banner = () => {
               className='flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0'>
                 {/* <button href="#contact" className='btn btn-lg'>
                     Contact me</button> */}
-              {/* <div>
-                <Link 
-                  to='contact' 
-                  activeClass='active'
-                  smooth={true}
-                  spy={true}
-                  // offset={-200}
-                  className='cursor-pointer w-[60px] h-[60px]'>
-                  <button href="#contact" className='btn btn-lg'>
-                    Contact me</button>
-                </Link>
-              </div> */}
-              <a 
+              <div
+                className='flex items-center gap-x-12'
+              >
+                <a
+                >
+                  <Link 
+                    to='work' 
+                    activeClass='active'
+                    smooth={true}
+                    spy={true}
+                    // offset={-200}
+                    className='cursor-pointer w-[60px] h-[60px]'>
+                      <a 
+                        // href="https://github.com/michaelvdang" 
+                        className='text-gradient btn-link'
+                      >Portfolio</a>
+                    {/* <button href="#contact" className='btn btn-lg'>
+                      Contact me</button> */}
+                  </Link>
+                </a>
+                <a 
+                  href="MichaelDang_Resume.pdf" // Replace with your file path
+                  download='Michael Dang - Resume.pdf'
+                  className='text-gradient btn-link'
+                >
+                  {/* <Link 
+                    // to="ModalPage.js"
+                    // to='MichaelDang_Resume.pdf' 
+                    // target='_blank'
+                    // download='MichaelDang_Resume.pdf' 
+                    // activeClass='active'
+                    smooth={true}
+                    spy={true}
+                    offset={-200}
+                    className='cursor-pointer w-[60px] h-[60px]'> */}
+                        Resume
+                  {/* </Link> */}
+                </a>
+              </div>
+              {/* <a 
                 href="https://github.com/michaelvdang" 
                 className='text-gradient btn-link'
-              >My Portfolio</a>
+              >My Portfolio</a> */}
             </motion.div>
             {/* socials */}
             <motion.div 
@@ -107,7 +134,7 @@ const Banner = () => {
             whileInView={'show'} 
             viewport={{once: false, amount: 0}} 
             className='hidden lg:flex flex-1 max-w-[320px] lg:max-w-[482px]'>
-            <img className='w-auto mx-auto' src={Image} alt="avatar" />
+            <img className='w-auto mx-auto' src={Image} alt="Michael Dang" />
           </motion.div>             
         </div>
       </div>

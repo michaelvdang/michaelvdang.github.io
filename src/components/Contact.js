@@ -22,9 +22,9 @@ const Contact = () => {
               <h4 className='text-[28px] uppercase text-accent font-medium mb-2 tracking-wide'>
                 Get in touch 
               </h4>
-              <h2 className='text-[45px] lg:text-[90px] leading-none'>
+              {/* <h2 className='text-[45px] lg:text-[90px] leading-none'>
                 Hire me!
-              </h2>
+              </h2> */}
             </div>
           </motion.div>
           {/* form */}

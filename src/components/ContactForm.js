@@ -2,6 +2,7 @@ import React, {useState, useRef} from 'react'
 import emailjs from '@emailjs/browser';
 import { scroller } from 'react-scroll';
 const service_id = process.env.REACT_APP_SERVICE_ID;
+// const service_id = 'service_3n9qy1a';
 const template_id = process.env.REACT_APP_TEMPLATE_ID;
 const public_key = process.env.REACT_APP_PUBLIC_KEY;
 
@@ -16,6 +17,7 @@ const ContactForm = () => {
   const classInvalidTextarea = 'bg-transparent focus:border-2 rounded border border-accentError py-12 placeholder:text-white transition-all resize-none mb-12';
   const classDefaultTextarea = 'bg-transparent focus:border-2 rounded border-b py-12 placeholder:text-white transition-all resize-none mb-12';
   const [messageClass, setMessageClass] = useState(classDefaultTextarea);
+  const [error, setError] = useState(null);
 
   // email validation
   const [showEmailWarning, setShowEmailWarning] = useState(false);
@@ -72,7 +74,8 @@ const ContactForm = () => {
       });
     }, function(error) {
       console.log('FAILED...', error);
-    });
+      setError(error);
+    })
     // alert('Your message has been sent! Thank you for reaching out to me.')
     // setSubmitted(true);
     // scroller.scrollTo('contact', {
@@ -89,6 +92,14 @@ const ContactForm = () => {
       <>
         <div className="text-2xl">Thank you!</div>
         <div className="text-md">I will get back to you as soon as possible.</div>
+      </>
+    );
+  }
+  if (error) {
+    return (
+      <>
+        <div className="text-2xl">Oops!</div>
+        <div className="text-md">Something went wrong. Please contact me at michaeldangv@gmail.com</div>
       </>
     );
   }

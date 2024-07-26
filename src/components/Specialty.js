@@ -75,10 +75,11 @@ const Specialties = () => {
           algorithms and data structures. */}
           </h3>
           <Link 
-            to='work' 
+            to='contact' 
             activeClass='active'
             smooth={true}
             spy={true}
+            alt='Michael Dang'
             // offset={-200}
             className='cursor-pointer w-[60px] h-[60px]'>
             <button href="#contact" className='btn btn-lg'>

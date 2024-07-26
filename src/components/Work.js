@@ -64,7 +64,7 @@ const Work = () => {
               </a>
             </div>
             {/* image */}
-            <a href={projects[0].link}>
+            <a href={projects[0].link} alt='Michael Dang'>
               <div
                 className="group relative overflow-hidden border-2
               border-white/50 rounded-xl"
@@ -78,7 +78,8 @@ const Work = () => {
                 <img
                   className="group-hover:scale-125 transition-all duration-300"
                   src={projects[0].img}
-                  alt={projects[0].title}
+                  alt="Michael Dang"
+                  // alt={projects[0].title}
                 />
                 {/* pretitle */}
                 <div
@@ -159,7 +160,8 @@ const Work = () => {
                 <img
                   className="group-hover:scale-125 transition-all duration-300"
                   src={projects[2].img}
-                  alt={projects[2].title}
+                  alt="Michael Dang"
+                  // alt={projects[2].title}
                 />
                 {/* pretitle */}
                 <div
